@@ -4,7 +4,7 @@
   <%= link_to "create new restaurant", new_restaurant_path, class: "btn btn-primary" %>
 </div>
 
-<ul>
+<ul class="list-unstyled">
   <% @restaurants.each do |restaurant| %>
   <div class="mb-4">
     <h3><%= restaurant.name %></h3>
