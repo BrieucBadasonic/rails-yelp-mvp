@@ -1,18 +1,17 @@
 <h1>List of all the restaurants</h1>
 
-<div>
-  <%= link_to "create new restaurant", new_restaurant_path, class: "btn btn-primary" %>
-</div>
+<%= link_to "create new restaurant", new_restaurant_path%>
 
-<ul class="list-unstyled">
+
+<ul class="list-unstyled mt-3">
   <% @restaurants.each do |restaurant| %>
-  <div class="mb-4">
-    <h3><%= restaurant.name %></h3>
+  <div class="p-2 mb-4 restaurants-card">
+    <h5><%= restaurant.name %></h5>
     <li><%= restaurant.address %></li>
     <li><%= restaurant.phone_number %></li>
     <li><%= restaurant.category %></li>
-    <li><%= link_to 'Details', restaurant_path(restaurant), class: "btn btn-primary" %>
-      <%= link_to 'Add a review', new_restaurant_review_path(restaurant), class: "btn btn-primary" %>
+    <li><%= link_to 'Details', restaurant_path(restaurant)%> |
+      <%= link_to 'Add a review', new_restaurant_review_path(restaurant)%>
     </li>
   </div>
   <% end %>

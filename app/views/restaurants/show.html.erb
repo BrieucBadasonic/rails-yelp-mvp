@@ -1,18 +1,22 @@
 <h1><%= @restaurant.name %></h1>
 
-<ul class="list-group ">
-  <li class="list-group-item"><%= @restaurant.address %></li>
-  <li class="list-group-item"><%= @restaurant.phone_number %></li>
-  <li class="list-group-item"><%= @restaurant.category %></li>
+<ul class="list-unstyled mt-3">
+  <div class="p-2 mb-4 restaurants-card">
+    <li ><%= @restaurant.address %></li>
+    <li ><%= @restaurant.phone_number %></li>
+    <li ><%= @restaurant.category %></li>
+  </div>
 </ul>
 
 <h3>Reviews of <%= @restaurant.name %></h3>
 
-<ul class="list-group">
-  <% @restaurant.reviews.each do |review| %>
-    <li class="list-group-item">rating: <%= review.rating %> </li>
-    <li class="list-group-item"><%= review.content %></li>
-  <% end %>
+<ul class="list-unstyled mt-3">
+  <div class="p-2 mb-4 restaurants-card">
+    <% @restaurant.reviews.each do |review| %>
+      <li >rating: <%= review.rating %> </li>
+      <li ><%= review.content %></li>
+    <% end %>
+  </div>
 </ul>
 
 

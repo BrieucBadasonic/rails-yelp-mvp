@@ -5,6 +5,6 @@
   <%= f.input :name %>
   <%= f.input :address %>
   <%= f.input :phone_number, as: :tel %>
-  <%= f.input :category, collection: ["chinese", "italian", "japanese", "french", "belgian"] %>
+  <%= f.input :category, collection: Restaurant::CAT  %>
   <%= f.button :submit, class: 'btn btn-large btn-danger' %>
 <% end %>
