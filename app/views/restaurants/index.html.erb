@@ -11,7 +11,9 @@
     <li><%= restaurant.address %></li>
     <li><%= restaurant.phone_number %></li>
     <li><%= restaurant.category %></li>
-    <li><%= link_to 'Details', restaurant_path(restaurant), class: "btn btn-primary" %></li>
+    <li><%= link_to 'Details', restaurant_path(restaurant), class: "btn btn-primary" %>
+      <%= link_to 'Add a review', new_restaurant_review_path(restaurant), class: "btn btn-primary" %>
+    </li>
   </div>
   <% end %>
 
